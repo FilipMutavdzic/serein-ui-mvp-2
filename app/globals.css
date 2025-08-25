@@ -1,0 +1,20 @@
+:root{
+  --bg:#FAFAFB; --card:#FFF; --text:#0F172A; --muted:#64748B;
+  --brand:#6AA6FF; --brand-2:#95D5B2; --accent:#FFD6A5;
+  --safe-top: env(safe-area-inset-top); --safe-bottom: env(safe-area-inset-bottom);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: var(--bg); color: var(--text); }
+* { box-sizing: border-box; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+/* Simple prose-like styles for MDX content */
+.prose h1, .prose h2, .prose h3 { color: var(--text); }
+.prose p { color: var(--muted); }
+.prose a { color: var(--brand); text-decoration: underline; }
